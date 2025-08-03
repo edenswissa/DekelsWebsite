@@ -110,19 +110,14 @@ const Battle: React.FC = () => {
                   
                   {/* Video Player */}
                   <div className="relative bg-gray-200 rounded-xl overflow-hidden aspect-video my-8">
-                    <video
-                      className="w-full h-full object-cover object-center"
-                      controls
-                      controlsList="nodownload"
-                      preload="metadata"
-                      poster="/images/dekel/profile.JPG"
-                      style={{
-                        objectPosition: '50% 30%', // מיקום מותאם - 50% אופקי, 30% אנכי
-                      }}
-                    >
-                      <source src="/movies/battle.mp4" type="video/mp4" />
-                      הדפדפן שלך לא תומך בנגן וידאו.
-                    </video>
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/fwytNEt-Jbg"
+                      title="הקרב על מוצב פגה - סיפור הגבורה של דקל"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
                   </div>
                 </div>
               </motion.div>
