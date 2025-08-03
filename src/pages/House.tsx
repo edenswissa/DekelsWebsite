@@ -44,7 +44,7 @@ const House: React.FC = () => {
               className="mb-2"
             >
               <img
-                src="/images/house/logo2.png"
+                src="./images/house/logo2.png"
                 alt="לוגו בית דקל"
                 className="h-40 md:h-40 mx-auto object-contain"
               />
@@ -222,7 +222,7 @@ const House: React.FC = () => {
                 </h3>
                 <div className="flex items-center justify-center">
                   <img
-                    src="/images/house/logo1.jpg"
+                    src="./images/house/logo1.jpg"
                     alt="לוגו העמותה"
                     className="h-40 w-40 object-contain"
                   />

@@ -18,7 +18,7 @@ const Gallery: React.FC = () => {
   const images: ImageItem[] = [
     {
       id: 1,
-      src: '/images/dekel/main.JPG',
+      src: './images/dekel/main.JPG',
       alt: 'דקל סויסה - תמונה ראשית',
       title: 'דקל סויסה',
       description: 'תמונה ראשית של דקל',
@@ -26,7 +26,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 2,
-      src: '/images/dekel/officer.jpg',
+      src: './images/dekel/officer.jpg',
       alt: 'דקל סויסה במדים',
       title: 'בשירות הצבאי',
       description: 'דקל במדים',
@@ -34,7 +34,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 3,
-      src: '/images/dekel/whiteShirt.JPG',
+      src: './images/dekel/whiteShirt.JPG',
       alt: 'דקל סויסה בחולצה לבנה',
       title: 'דקל בחולצה לבנה',
       description: 'דקל בחולצה לבנה',
@@ -42,7 +42,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 4,
-      src: '/images/dekel/PHOTO-2024-05-12-01-10-37 2.jpg',
+      src: './images/dekel/PHOTO-2024-05-12-01-10-37 2.jpg',
       alt: 'דקל סויסה - תמונה 4',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -50,7 +50,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 5,
-      src: '/images/dekel/72833904-44c4-4182-80b3-c800d46857f0.jpg',
+      src: './images/dekel/72833904-44c4-4182-80b3-c800d46857f0.jpg',
       alt: 'דקל סויסה - תמונה 5',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -58,7 +58,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 6,
-      src: '/images/dekel/14347ed2-d937-49f3-a64a-a7bb7a2a8521.JPG',
+      src: './images/dekel/14347ed2-d937-49f3-a64a-a7bb7a2a8521.JPG',
       alt: 'דקל סויסה - תמונה 6',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -66,7 +66,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 7,
-      src: '/images/dekel/b9845ecf-e075-4faa-81b5-2e6d009d9cc6.JPG',
+      src: './images/dekel/b9845ecf-e075-4faa-81b5-2e6d009d9cc6.JPG',
       alt: 'דקל סויסה - תמונה 7',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -74,7 +74,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 8,
-      src: '/images/dekel/IMG_5525.JPG',
+      src: './images/dekel/IMG_5525.JPG',
       alt: 'דקל סויסה - תמונה 8',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -82,7 +82,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 9,
-      src: '/images/dekel/0a876c50-2755-431c-bd6f-c38005351fbf.JPG',
+      src: './images/dekel/0a876c50-2755-431c-bd6f-c38005351fbf.JPG',
       alt: 'דקל סויסה - תמונה 9',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -90,7 +90,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 10,
-      src: '/images/dekel/0fe50942-2e45-475e-87f5-ff9a177d1fff.JPG',
+      src: './images/dekel/0fe50942-2e45-475e-87f5-ff9a177d1fff.JPG',
       alt: 'דקל סויסה - תמונה 10',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -98,7 +98,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 11,
-      src: '/images/dekel/63aad398-2222-422a-974e-77a37ccd0ae1.JPG',
+      src: './images/dekel/63aad398-2222-422a-974e-77a37ccd0ae1.JPG',
       alt: 'דקל סויסה - תמונה 11',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',
@@ -106,7 +106,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 12,
-      src: '/images/dekel/IMG_1198.jpeg',
+      src: './images/dekel/IMG_1198.jpeg',
       alt: 'דקל סויסה - תמונה 12',
       title: 'דקל סויסה',
       description: 'תמונה של דקל',

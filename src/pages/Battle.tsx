@@ -134,7 +134,7 @@ const Battle: React.FC = () => {
               {/* Hero Image */}
               <div className="hidden md:block bg-gray-100 rounded-2xl aspect-[4/5] overflow-hidden">
                 <img
-                  src="/images/dekel/63aad398-2222-422a-974e-77a37ccd0ae1.JPG"
+                  src="./images/dekel/63aad398-2222-422a-974e-77a37ccd0ae1.JPG"
                   className="w-full h-full object-cover"
                   style={{
                     objectPosition: '50% 50%' // מרכז מושלם - נותן זום אאוט טבעי

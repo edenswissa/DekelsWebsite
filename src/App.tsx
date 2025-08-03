@@ -1,5 +1,5 @@
 // ... existing code ...
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';

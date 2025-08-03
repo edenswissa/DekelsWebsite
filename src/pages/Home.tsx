@@ -20,7 +20,7 @@ const Home: React.FC = () => {
                 <div className="flex gap-4 mb-6">
                   <div className="w-48 h-48 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
                     <img 
-                      src="/images/dekel/main.JPG" 
+                      src="./images/dekel/main.JPG" 
                       alt="דקל סויסה" 
                       className="w-full h-full object-cover object-top"
                     />
@@ -38,21 +38,21 @@ const Home: React.FC = () => {
               <div className="hidden lg:block space-y-12">
                 <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="/images/dekel/main.JPG" 
+                    src="./images/dekel/main.JPG" 
                     alt="דקל סויסה במדים" 
                     className="w-full h-full object-cover object-[50%_10%]"
                   />
                 </div>
                 <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="/images/dekel/officer.jpg" 
+                    src="./images/dekel/officer.jpg" 
                     alt="דקל סויסה" 
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="/images/dekel/whiteShirt.JPG" 
+                    src="./images/dekel/whiteShirt.JPG" 
                     alt="דקל סויסה" 
                     className="w-full h-full object-cover"
                   />
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="w-48 h-48 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
                     <img 
-                      src="/images/dekel/officer.jpg" 
+                      src="./images/dekel/officer.jpg" 
                       alt="דקל סויסה במדים" 
                       className="w-full h-full object-cover object-top"
                     />
