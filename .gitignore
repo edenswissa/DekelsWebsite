@@ -1,9 +1,7 @@
 node_modules
 
-# Large video files
-public/movies/*.mp4
-public/movies/*.mov
-public/movies/*.avi
+# Large video files - exclude only the very large ones
+public/movies/battle.mp4
 
 # System files
 .DS_Store
