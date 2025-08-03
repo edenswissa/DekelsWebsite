@@ -6,15 +6,15 @@ const House: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const houseImages = [
-    '/images/house/PHOTO-2025-07-10-16-24-54.jpg',
-    '/images/house/PHOTO-2025-07-10-10-34-32.jpg',
-    '/images/house/PHOTO-2025-07-09-16-02-21.jpg',
-    '/images/house/PHOTO-2025-05-29-16-57-58 2.jpg',
-    '/images/house/PHOTO-2025-05-29-16-57-58 3.jpg',
-    '/images/house/PHOTO-2025-05-29-16-57-58.jpg',
-    '/images/house/PHOTO-2025-05-29-16-57-59.jpg',
-    '/images/house/PHOTO-2025-05-22-06-19-19.jpg',
-    '/images/house/PHOTO-2025-04-22-22-57-11.jpg'
+    './images/house/PHOTO-2025-07-10-16-24-54.jpg',
+    './images/house/PHOTO-2025-07-10-10-34-32.jpg',
+    './images/house/PHOTO-2025-07-09-16-02-21.jpg',
+    './images/house/PHOTO-2025-05-29-16-57-58 2.jpg',
+    './images/house/PHOTO-2025-05-29-16-57-58 3.jpg',
+    './images/house/PHOTO-2025-05-29-16-57-58.jpg',
+    './images/house/PHOTO-2025-05-29-16-57-59.jpg',
+    './images/house/PHOTO-2025-05-22-06-19-19.jpg',
+    './images/house/PHOTO-2025-04-22-22-57-11.jpg'
   ];
 
   const nextImage = () => {
@@ -155,9 +155,9 @@ const House: React.FC = () => {
                   <video
                     controls
                     className="w-full h-full object-contain"
-                    poster="/images/house/logo2.png"
+                    poster="./images/house/logo2.png"
                   >
-                    <source src="/movies/House.mp4" type="video/mp4" />
+                    <source src="./movies/House.mp4" type="video/mp4" />
                     הדפדפן שלך לא תומך בסרטון.
                   </video>
                 </div>
@@ -286,9 +286,9 @@ const House: React.FC = () => {
                   <video
                     controls
                     className="w-full h-full object-contain"
-                    poster="/images/house/PHOTO-2025-05-22-06-19-19.jpg"
+                    poster="./images/house/PHOTO-2025-05-22-06-19-19.jpg"
                   >
-                    <source src="/movies/HouseEnglish.mp4" type="video/mp4" />
+                    <source src="./movies/HouseEnglish.mp4" type="video/mp4" />
                     הדפדפן שלך לא תומך בסרטון.
                   </video>
                 </div>
