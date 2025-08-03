@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Play } from 'lucide-react';
+// ... existing code ...
 
 interface ArticleItem {
   id: number;

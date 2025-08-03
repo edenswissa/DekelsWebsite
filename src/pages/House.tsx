@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Instagram, ExternalLink, Users, Heart, Home, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Instagram, Heart, Home, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const House: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

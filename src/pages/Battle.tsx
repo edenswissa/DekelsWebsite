@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, ExternalLink, Calendar, MapPin, User } from 'lucide-react';
+import { ExternalLink, Calendar, MapPin } from 'lucide-react';
 
 const Battle: React.FC = () => {
   return (
