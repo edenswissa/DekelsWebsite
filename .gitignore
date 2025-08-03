@@ -1,0 +1,10 @@
+node_modules
+
+# Large video files
+public/movies/*.mp4
+public/movies/*.mov
+public/movies/*.avi
+
+# System files
+.DS_Store
+**/.DS_Store

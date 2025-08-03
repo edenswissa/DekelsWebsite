@@ -1,0 +1,45 @@
+/* Global Color Variables */
+:root {
+  /* Primary Colors - New Palette */
+  --color-main: #E9E4DC;      /* Alabaster - cream/off-white */
+  --color-second: #BAC6B8;     /* Ash gray - light sage */
+  --color-third: #8BA794;      /* Cambridge blue - medium green */
+  --color-fourth: #5D6E75;     /* Payne's gray - dark blue-gray */
+  --color-fifth: #2F3456;      /* Space cadet - deep navy */
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray: #6B7280;
+  
+  /* Opacity Variants */
+  --color-main-20: rgba(233, 228, 220, 0.2);
+  --color-second-20: rgba(186, 198, 184, 0.2);
+  --color-fourth-50: rgba(93, 110, 117, 0.5);
+  --color-white-95: rgba(255, 255, 255, 0.95);
+}
+
+/* Utility Classes for Colors */
+.bg-primary-main { background-color: var(--color-main); }
+.bg-primary-second { background-color: var(--color-second); }
+.bg-primary-third { background-color: var(--color-third); }
+.bg-primary-fourth { background-color: var(--color-fourth); }
+.bg-primary-fifth { background-color: var(--color-fifth); }
+
+.text-primary-main { color: var(--color-main); }
+.text-primary-second { color: var(--color-second); }
+.text-primary-third { color: var(--color-third); }
+.text-primary-fourth { color: var(--color-fourth); }
+.text-primary-fifth { color: var(--color-fifth); }
+
+.border-primary-main { border-color: var(--color-main); }
+.border-primary-second { border-color: var(--color-second); }
+.border-primary-third { border-color: var(--color-third); }
+.border-primary-fourth { border-color: var(--color-fourth); }
+.border-primary-fifth { border-color: var(--color-fifth); }
+
+/* Opacity Variants */
+.bg-primary-main-20 { background-color: var(--color-main-20); }
+.bg-primary-second-20 { background-color: var(--color-second-20); }
+.bg-primary-fourth-50 { background-color: var(--color-fourth-50); }
+.bg-white-95 { background-color: var(--color-white-95); } 
