@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-4 md:py-8">
+    <div className="min-h-screen bg-white pt-[90px] md:pt-[195px]">
+      <div className="container mx-auto px-4 py-2 md:py-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

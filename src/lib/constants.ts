@@ -59,6 +59,11 @@ export const NAVIGATION_ITEMS = [
     path: '/gallery',
     icon: 'image'
   },
+  {
+    name: 'מתוך המחברות',
+    path: '/notebooks',
+    icon: 'file-text'
+  },
   // {
   //   name: 'הנצחות',
   //   path: '/memorials',

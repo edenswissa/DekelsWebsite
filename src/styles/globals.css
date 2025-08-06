@@ -81,13 +81,4 @@ html {
   }
 }
 
-/* Header spacing for fixed header */
-body {
-  padding-top: 195px;
-}
-
-@media (max-width: 768px) {
-  body {
-    padding-top: 180px;
-  }
-} 
+/* Header spacing for fixed header - removed to let components handle their own spacing */ 

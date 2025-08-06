@@ -137,8 +137,8 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-4 md:py-8 pt-2 md:pt-10">
+    <div className="min-h-screen bg-white pt-[90px] md:pt-[195px]">
+              <div className="container mx-auto px-4 py-2 md:py-4 pt-2 md:pt-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

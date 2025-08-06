@@ -1,107 +1,105 @@
-# אתר זיכרון לדקל סויסה ז"ל
+# Dekel Swissa Memorial Website
 
-אתר זיכרון אינטראקטיבי לזכרו של דקל סויסה, שנפל בקרב על מוצב פגה במלחמת חרבות ברזל.
+An interactive memorial website in memory of Dekel Swissa, who fell in battle at the Pega outpost during the Iron Swords War.
 
-## 🎯 מטרת האתר
+## 🎯 Website Purpose
 
-האתר נועד לשמר את זיכרו של דקל ולהנציח את סיפור חייו, הקרב בו נפל, והפרויקטים שנעשו לזכרו. האתר מיועד למשפחה, חברים, וכל מי שרוצה להכיר את דקל ואת המורשת שהשאיר.
+The website is designed to preserve Dekel's memory and commemorate his life story, the battle in which he fell, and the projects established in his memory. The site is intended for family, friends, and anyone who wants to learn about Dekel and the legacy he left behind.
 
-## ✨ תכונות עיקריות
+## ✨ Main Features
 
-### 📱 עיצוב מותאם למובייל
-- עיצוב רספונסיבי מלא
-- תמיכה מלאה ב-RTL (עברית)
-- ממשק משתמש פשוט ונעים לעין
+### 📱 Mobile-Responsive Design
+- Fully responsive design
+- Complete RTL (Hebrew) support
+- Simple and pleasant user interface
 
-### 🎨 עיצוב ויזואלי
-- צבעים: חום ובז' (גוונים חמים ונעימים)
-- עיצוב עגול ומודרני
-- טיפוגרפיה ברורה וקריאה
+### 🎨 Visual Design
+- Colors: Sage green and cream palette (warm and pleasant tones)
+- Rounded and modern design
+- Clear and readable typography
 
-### 📄 דפים ראשיים
+### 📄 Main Pages
 
-1. **דף הבית** - סיפור חייו של דקל + תמונות
-2. **סיפור הקרב** - סיפור הקרב על מוצב פגה, כולל סרטונים, הקלטות ותמונות
-3. **כתבות** - אוסף הכתבות שנעשו עליו, כולל קישורים ל-YouTube
-4. **בית דקל** - מידע על הבית שהקמנו לזכרו + תמונות + פרטי יצירת קשר
-5. **גלריה** - אוסף תמונות מאירועים שונים
-6. **הנצחות** - עמוד עם קישורים ותמונות של פרויקטי הנצחה
+1. **Home Page** - Dekel's life story + photos
+2. **Battle Story** - The story of the battle at Pega outpost, including videos, recordings, and photos
+3. **Articles** - Collection of articles written about him, including YouTube links
+4. **Dekel's House** - Information about the house we established in his memory + photos + contact details
+5. **Gallery** - Collection of photos from various events
+6. **Memorials** - Page with links and photos of memorial projects (coming soon)
 
-## 🛠️ טכנולוגיות
+## 🛠️ Technologies
 
-- **React 18** - ספריית UI
-- **TypeScript** - תמיכה בטיפוסים
-- **Tailwind CSS** - עיצוב מהיר ויעיל
-- **shadcn/ui** - רכיבי UI מוכנים
-- **React Router** - ניווט בין דפים
-- **Framer Motion** - אנימציות חלקות
-- **Lucide React** - אייקונים
+- **React 18** - UI library
+- **TypeScript** - Type support
+- **Tailwind CSS** - Fast and efficient styling
+- **Radix UI** - Accessible UI components
+- **React Router** - Page navigation
+- **Framer Motion** - Smooth animations
+- **Lucide React** - Icons
+- **React Player** - Video playback
+- **React Markdown** - Markdown rendering
+- **React Image Gallery** - Image galleries
+- **React Intersection Observer** - Scroll animations
 
-## 📁 מבנה הפרויקט
+## 📁 Project Structure
 
 ```
 src/
 ├── components/
-│   ├── ui/           # רכיבי shadcn/ui
-│   ├── layout/       # רכיבי מבנה (Navbar, Footer)
-│   └── common/       # רכיבים משותפים
-├── pages/            # דפי האתר
-├── hooks/            # React hooks מותאמים אישית
-├── lib/              # פונקציות עזר
-├── styles/           # קבצי CSS גלובליים
-└── data/             # נתונים סטטיים (תמונות, טקסטים)
+│   └── layout/       # Layout components (Header)
+├── pages/            # Website pages (Home, Battle, Articles, House, Gallery)
+├── lib/              # Helper functions and constants
+└── styles/           # Global CSS files
 ```
 
-## 🎨 משתנים גלובליים
+## 🎨 Global Variables
 
-### צבעים
-- **חום ראשי**: `#8B4513`
-- **חום בהיר**: `#D2691E`
-- **בז'**: `#F5F5DC`
-- **בז' כהה**: `#DEB887`
-- **לבן**: `#FFFFFF`
-- **שחור**: `#000000`
+### Colors
+- **Primary Cream**: `#E9E4DC` (Alabaster)
+- **Light Sage**: `#BAC6B8` (Ash gray)
+- **Medium Green**: `#8BA794` (Cambridge blue)
+- **Dark Blue-Gray**: `#5D6E75` (Payne's gray)
+- **Deep Navy**: `#2F3456` (Space cadet)
 
-### טיפוגרפיה
-- **כותרת ראשית**: Heebo Bold
-- **כותרת משנה**: Heebo Medium
-- **גוף טקסט**: Heebo Regular
+### Typography
+- **Primary Font**: Heebo, sans-serif
+- **Weights**: Light (300), Regular (400), Medium (500), Bold (700)
 
-## 🚀 התקנה והפעלה
+## 🚀 Installation and Setup
 
 ```bash
-# התקנת תלויות
+# Install dependencies
 npm install
 
-# הפעלת שרת פיתוח
+# Start development server
 npm run dev
 
-# בנייה לפרודקשן
+# Build for production
 npm run build
 ```
 
-## 📱 תמיכה ב-RTL
+## 📱 RTL Support
 
-האתר מוגדר עם תמיכה מלאה ב-RTL מהבסיס:
-- כיוון טקסט מימין לשמאל
-- ניווט מותאם ל-RTL
-- רכיבי UI מותאמים לעברית
+The website is configured with full RTL support from the ground up:
+- Right-to-left text direction
+- RTL-adapted navigation
+- UI components adapted for Hebrew
 
-## 🎭 אנימציות
+## 🎭 Animations
 
-- מעברים חלקים בין דפים
-- אפקטי hover על כפתורים
-- אנימציות טעינה לתמונות
-- אפקטי scroll
+- Smooth transitions between pages
+- Hover effects on buttons
+- Loading animations for images
+- Scroll effects with Intersection Observer
 
-## 📸 אופטימיזציה
+## 📸 Optimization
 
-- תמונות מותאמות למובייל
-- טעינה מהירה
-- SEO מותאם
-- נגישות מלאה
+- Mobile-optimized images
+- Fast loading
+- SEO optimized
+- Full accessibility with Radix UI components
 
 ---
 
-**לזכרו של דקל סויסה ז"ל**  
-*יהי זכרו ברוך* 
+**In memory of Dekel Swissa z"l**  
+*May his memory be blessed* 
