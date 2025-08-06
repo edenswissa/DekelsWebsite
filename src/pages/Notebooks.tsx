@@ -13,10 +13,8 @@ const Notebooks: React.FC = () => {
       {/* Header Section with Background */}
       <section className="relative h-48 md:h-[250px] overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(./images/notebooks/background.jpeg)' }}
+          className="absolute inset-0 bg-white"
         >
-          <div className="absolute inset-0 bg-white/60"></div>
         </div>
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-gray-800 px-4">
           <motion.h1 
@@ -291,34 +289,36 @@ const Notebooks: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Summary Section */}
+      {/* Summary Section with Notebooks Background */}
       <section className="py-8 bg-[#BAC6B8]">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-lg md:text-xl leading-relaxed text-gray-800 space-y-4"
+              className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200"
             >
-              <p>
-                דקל לא כתב לאחרים – הוא כתב בשביל עצמו.
-              </p>
-              <p>
-                כדי ללמוד, להשתפר, ולשמר את הערכים וההתנהגויות שרצה לחיות לפיהם.
-              </p>
-              <p>
-                בעט פשוט, במחברות מהחיים, הוא תיעד מחשבות על אמונה, גבורה, התמודדות ושליחות.
-              </p>
-              <p>
-                הוא כתב לעצמו – אבל המילים שלו מדברות גם אלינו.
-              </p>
-              <p>
-                אנחנו משתפים כאן קטעים נבחרים,
-              </p>
-              <p>
-                כדי שדקל ימשיך לעורר השראה – בדיוק כמו שהוא היה.
-              </p>
+              <div className="text-center text-gray-800 space-y-4">
+                <p className="text-lg md:text-xl leading-relaxed">
+                  דקל לא כתב לאחרים – הוא כתב בשביל עצמו.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed">
+                  כדי ללמוד, להשתפר, ולשמר את הערכים וההתנהגויות שרצה לחיות לפיהם.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed">
+                  בעט פשוט, במחברות מהחיים, הוא תיעד מחשבות על אמונה, גבורה, התמודדות ושליחות.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed">
+                  הוא כתב לעצמו – אבל המילים שלו מדברות גם אלינו.
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed">
+                  אנחנו משתפים כאן קטעים נבחרים,
+                </p>
+                <p className="text-lg md:text-xl leading-relaxed">
+                  כדי שדקל ימשיך לעורר השראה – בדיוק כמו שהוא היה.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
