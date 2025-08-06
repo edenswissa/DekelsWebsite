@@ -14,7 +14,7 @@ const Notebooks: React.FC = () => {
       <section className="relative h-48 md:h-[250px] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/notebooks/background.jpeg)' }}
+          style={{ backgroundImage: 'url(./images/notebooks/background.jpeg)' }}
         >
           <div className="absolute inset-0 bg-white/60"></div>
         </div>
@@ -63,9 +63,9 @@ const Notebooks: React.FC = () => {
                     className="w-full h-full object-contain"
                     controls
                     controlsList="nodownload"
-                    poster="/images/notebooks/video-poster.jpg"
+                    poster="./images/notebooks/video-poster.jpg"
                   >
-                    <source src="/images/notebooks/asafGranit.mp4" type="video/mp4" />
+                    <source src="./images/notebooks/asafGranit.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -130,7 +130,7 @@ const Notebooks: React.FC = () => {
                     opacity: 0.3
                   }}></div>
                   <img 
-                    src="/images/notebooks/gvora.jpg" 
+                    src="./images/notebooks/gvora.jpg" 
                     alt="מידת הגבורה" 
                     className="w-full h-auto rounded-lg relative z-10"
                   />
@@ -214,7 +214,7 @@ const Notebooks: React.FC = () => {
                     opacity: 0.3
                   }}></div>
                   <img 
-                    src="/images/notebooks/problem.jpg" 
+                    src="./images/notebooks/problem.jpg" 
                     alt="אמונה" 
                     className="w-full h-auto rounded-lg relative z-10"
                   />
@@ -280,7 +280,7 @@ const Notebooks: React.FC = () => {
                     opacity: 0.3
                   }}></div>
                   <img 
-                    src="/images/notebooks/maane.jpg" 
+                    src="./images/notebooks/maane.jpg" 
                     alt="אין איום בלי מענה" 
                     className="w-full h-auto rounded-lg relative z-10"
                   />
