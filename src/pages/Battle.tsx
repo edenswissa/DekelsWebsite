@@ -110,14 +110,10 @@ const Battle: React.FC = () => {
                   
                   {/* Video Player */}
                   <div className="relative bg-gray-200 rounded-xl overflow-hidden aspect-video my-8">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/fwytNEt-Jbg"
-                      title="הקרב על מוצב פגה - סיפור הגבורה של דקל"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
+                    <video controls className="w-full h-full object-contain" poster="./images/dekel/63aad398-2222-422a-974e-77a37ccd0ae1.JPG">
+                      <source src="https://github.com/edenswissa/DekelsWebsite/releases/download/1.0/BattleStory.mp4" type="video/mp4" />
+                      הדפדפן שלך לא תומך בסרטון.
+                    </video>
                   </div>
                 </div>
               </motion.div>
