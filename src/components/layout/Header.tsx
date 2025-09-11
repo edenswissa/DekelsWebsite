@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, FileText, Building, Image, Heart, Menu, X } from 'lucide-react';
+import { Home, FileText, Building, Image, Heart, Menu, X, Quote } from 'lucide-react';
 import { SITE_CONFIG, NAVIGATION_ITEMS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
@@ -24,6 +24,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         return <Image size={20} />;
       case 'heart':
         return <Heart size={20} />;
+      case 'quote':
+        return <Quote size={20} />;
       default:
         return <FileText size={20} />;
     }

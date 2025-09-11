@@ -110,7 +110,7 @@ const Battle: React.FC = () => {
                   
                   {/* Video Player */}
                   <div className="relative bg-gray-200 rounded-xl overflow-hidden aspect-video my-8">
-                    <video controls className="w-full h-full object-contain" poster="./images/dekel/63aad398-2222-422a-974e-77a37ccd0ae1.JPG">
+                    <video controls className="w-full h-full object-contain" poster="./images/dekel/officer.jpg">
                       <source src="https://github.com/edenswissa/DekelsWebsite/releases/download/1.0/BattleStory.mp4" type="video/mp4" />
                       הדפדפן שלך לא תומך בסרטון.
                     </video>

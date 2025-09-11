@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Instagram, Coffee, BookOpen } from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
@@ -56,6 +57,42 @@ const Home: React.FC = () => {
                     alt="דקל סויסה" 
                     className="w-full h-full object-cover"
                   />
+                </div>
+                
+                {/* External Links - Desktop */}
+                <div className="bg-white border border-gray-200 rounded-2xl p-6">
+                  <h3 className="text-lg font-bold text-primary-fifth mb-4">
+                    קישורים נוספים
+                  </h3>
+                  <div className="space-y-3">
+                    <a 
+                      href="https://www.instagram.com/remember_dekel_swissa?igsh=MWdpdWoxcGFtMzFpbg==" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
+                    >
+                      <Instagram size={16} />
+                      <span className="text-sm">דף האינסטגרם לזכרו</span>
+                    </a>
+                    <a 
+                      href="https://morning-shops.com/LaShaker" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
+                    >
+                      <Coffee size={16} />
+                      <span className="text-sm">ליקר קפה לזכרו - La Shaker</span>
+                    </a>
+                    <a 
+                      href="https://www.matkonzikaron.co.il/kl-hmtkvnym/דקל-סויסה-ז%D7%B4ל" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
+                    >
+                      <BookOpen size={16} />
+                      <span className="text-sm">מתכון עם זיכרון - עוגיות שוקולד צ'יפס</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,6 +171,42 @@ const Home: React.FC = () => {
                   <h3 className="text-2xl font-bold text-primary-fourth">
                     גיבור ישראל
                   </h3>
+                </div>
+
+                {/* External Links - Mobile */}
+                <div className="bg-white border border-gray-200 rounded-2xl p-6 mt-8">
+                  <h3 className="text-lg font-bold text-primary-fifth mb-4">
+                    קישורים נוספים
+                  </h3>
+                  <div className="space-y-3">
+                    <a 
+                      href="https://www.instagram.com/remember_dekel_swissa?igsh=MWdpdWoxcGFtMzFpbg==" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
+                    >
+                      <Instagram size={16} />
+                      <span className="text-sm">דף האינסטגרם לזכרו</span>
+                    </a>
+                    <a 
+                      href="https://morning-shops.com/LaShaker" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
+                    >
+                      <Coffee size={16} />
+                      <span className="text-sm">ליקר קפה לזכרו - La Shaker</span>
+                    </a>
+                    <a 
+                      href="https://www.matkonzikaron.co.il/kl-hmtkvnym/דקל-סויסה-ז%D7%B4ל" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
+                    >
+                      <BookOpen size={16} />
+                      <span className="text-sm">מתכון עם זיכרון - עוגיות שוקולד צ'יפס</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 

@@ -64,6 +64,11 @@ export const NAVIGATION_ITEMS = [
     path: '/notebooks',
     icon: 'file-text'
   },
+  {
+    name: 'נאום מסע הכומתה',
+    path: '/speech',
+    icon: 'quote'
+  },
   // {
   //   name: 'הנצחות',
   //   path: '/memorials',

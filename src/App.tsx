@@ -8,9 +8,10 @@ import Battle from './pages/Battle';
 import Articles from './pages/Articles';
 import House from './pages/House';
 import Notebooks from './pages/Notebooks';
+import Speech from './pages/Speech';
 import { NAVIGATION_ITEMS } from '@/lib/constants';
 import { Link, useLocation } from 'react-router-dom';
-import { Home as HomeIcon, FileText, Building, Image, Heart, X } from 'lucide-react';
+import { Home as HomeIcon, FileText, Building, Image, Heart, X, Instagram, Coffee, BookOpen, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 function AppContent() {
@@ -29,6 +30,8 @@ function AppContent() {
         return <Image size={20} />;
       case 'heart':
         return <Heart size={20} />;
+      case 'quote':
+        return <Quote size={20} />;
       default:
         return <FileText size={20} />;
     }
@@ -46,6 +49,7 @@ function AppContent() {
           <Route path="/house" element={<House />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/notebooks" element={<Notebooks />} />
+          <Route path="/speech" element={<Speech />} />
           {/* <Route path="/memorials" element={<div className="p-8 text-center text-primary-fifth">הנצחות - בקרוב</div>} /> */}
         </Routes>
       </main>
@@ -90,6 +94,46 @@ function AppContent() {
                   </Link>
                 );
               })}
+              
+              {/* Divider */}
+              <div className="border-t border-gray-200 my-4"></div>
+              
+              {/* External Links */}
+              <div className="px-4 py-2">
+                <h3 className="text-sm font-semibold text-gray-500 mb-3">קישורים נוספים</h3>
+                <div className="space-y-2">
+                  <a 
+                    href="https://www.instagram.com/remember_dekel_swissa?igsh=MWdpdWoxcGFtMzFpbg==" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-reverse space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Instagram size={20} className="text-gray-500" />
+                    <span className="font-medium text-sm">דף האינסטגרם לזכרו</span>
+                  </a>
+                  <a 
+                    href="https://morning-shops.com/LaShaker" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-reverse space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Coffee size={20} className="text-gray-500" />
+                    <span className="font-medium text-sm">ליקר קפה לזכרו - La Shaker</span>
+                  </a>
+                  <a 
+                    href="https://www.matkonzikaron.co.il/kl-hmtkvnym/דקל-סויסה-ז%D7%B4ל" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-reverse space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <BookOpen size={20} className="text-gray-500" />
+                    <span className="font-medium text-sm">מתכון עם זיכרון - עוגיות שוקולד צ'יפס</span>
+                  </a>
+                </div>
+              </div>
             </nav>
           </div>
         </div>
