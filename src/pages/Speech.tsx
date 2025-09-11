@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Quote, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { Quote, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Speech: React.FC = () => {
   const [isTranscriptOpen, setIsTranscriptOpen] = useState(false);
