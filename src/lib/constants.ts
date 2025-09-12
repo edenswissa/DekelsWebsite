@@ -69,6 +69,11 @@ export const NAVIGATION_ITEMS = [
     path: '/speech',
     icon: 'quote'
   },
+  {
+    name: 'כתבו לנו',
+    path: '/write-to-us',
+    icon: 'mail'
+  },
   // {
   //   name: 'הנצחות',
   //   path: '/memorials',

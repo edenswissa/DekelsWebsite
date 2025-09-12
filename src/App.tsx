@@ -9,9 +9,10 @@ import Articles from './pages/Articles';
 import House from './pages/House';
 import Notebooks from './pages/Notebooks';
 import Speech from './pages/Speech';
+import WriteToUs from './pages/WriteToUs';
 import { NAVIGATION_ITEMS } from '@/lib/constants';
 import { Link, useLocation } from 'react-router-dom';
-import { Home as HomeIcon, FileText, Building, Image, Heart, X, Instagram, Coffee, BookOpen, Quote } from 'lucide-react';
+import { Home as HomeIcon, FileText, Building, Image, Heart, X, Instagram, Coffee, BookOpen, Quote, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 function AppContent() {
@@ -32,6 +33,8 @@ function AppContent() {
         return <Heart size={20} />;
       case 'quote':
         return <Quote size={20} />;
+      case 'mail':
+        return <Mail size={20} />;
       default:
         return <FileText size={20} />;
     }
@@ -50,6 +53,7 @@ function AppContent() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/notebooks" element={<Notebooks />} />
           <Route path="/speech" element={<Speech />} />
+          <Route path="/write-to-us" element={<WriteToUs />} />
           {/* <Route path="/memorials" element={<div className="p-8 text-center text-primary-fifth">הנצחות - בקרוב</div>} /> */}
         </Routes>
       </main>
