@@ -9,7 +9,7 @@ const Notebooks: React.FC = () => {
   const [ref4, inView4] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="min-h-screen bg-white pt-[73px] md:pt-[195px]">
+    <div className="bg-white">
       {/* Header Section with Background */}
       <section className="relative h-48 md:h-[250px] overflow-hidden">
         <div 

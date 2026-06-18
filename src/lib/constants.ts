@@ -42,12 +42,12 @@ export const NAVIGATION_ITEMS = [
   {
     name: 'סיפור הקרב',
     path: '/battle',
-    icon: 'file-text'
+    icon: 'shield'
   },
   {
     name: 'כתבות',
     path: '/articles',
-    icon: 'file-text'
+    icon: 'newspaper'
   },
   {
     name: 'בית דקל',
@@ -62,7 +62,7 @@ export const NAVIGATION_ITEMS = [
   {
     name: 'מתוך המחברות',
     path: '/notebooks',
-    icon: 'file-text'
+    icon: 'book'
   },
   {
     name: 'נאום מסע הכומתה',

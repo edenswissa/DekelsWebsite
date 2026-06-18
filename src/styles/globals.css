@@ -7,6 +7,13 @@
 :root {
   direction: rtl;
   text-align: right;
+  --header-height: 86px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 150px;
+  }
 }
 
 * {
@@ -23,8 +30,9 @@ body {
   text-align: right;
   margin: 0;
   padding: 0;
-  background-color: var(--color-cream);
-  color: var(--color-charcoal);
+  background-color: var(--page-bg);
+  color: var(--page-fg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* RTL specific styles */
@@ -39,16 +47,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-cream);
+  background: rgb(var(--color-main));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-bottleGreen);
+  background: rgb(var(--color-third));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-turquoise);
+  background: rgb(var(--color-fourth));
 }
 
 /* Smooth scrolling */
@@ -58,7 +66,7 @@ html {
 
 /* Focus styles for accessibility */
 *:focus {
-  outline: 2px solid var(--color-turquoise);
+  outline: 2px solid rgb(var(--color-third));
   outline-offset: 2px;
 }
 

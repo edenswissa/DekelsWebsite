@@ -6,7 +6,7 @@ const Speech: React.FC = () => {
   const [isTranscriptOpen, setIsTranscriptOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white pt-[90px] md:pt-[195px]">
+    <div className="bg-white">
       <div className="container mx-auto px-4 py-2 md:py-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

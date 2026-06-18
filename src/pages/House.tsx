@@ -26,7 +26,7 @@ const House: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white pt-[90px] md:pt-[195px]">
+        <div className="bg-white">
             <div className="container mx-auto px-4 py-2 md:py-4 pt-2 md:pt-4">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-6xl mx-auto">
                     {/* Header */}

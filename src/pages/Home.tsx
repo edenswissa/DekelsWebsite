@@ -1,17 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Coffee, BookOpen } from 'lucide-react';
+import { Award, Shield, Calendar, MapPin, ChevronDown } from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white pt-[90px] md:pt-[195px]">
-      <div className="container mx-auto px-4 py-2 md:py-4">
+    <div className="bg-white">
+      {/* Full-bleed cinematic hero */}
+      <section className="relative h-[100svh] min-h-[520px] w-full overflow-hidden bg-primary-fifth dark:bg-[#13162a]">
+        {/* Blurred backdrop keeps the screen full-bleed (no empty bars) */}
+        <img
+          src="./images/dekel/officer.jpg"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-50"
+        />
+        {/* Foreground portrait. Knobs are SEPARATE per screen size:
+            MOBILE  (no prefix): scale-[1.4]  translate-y-[10%]
+            DESKTOP (md: prefix): md:scale-[2.7] md:translate-y-[50%]
+            scale = zoom (higher = closer) · translate-y = vertical (higher % = moves DOWN / more face) */}
+        <img
+          src="./images/dekel/officer.jpg"
+          alt="סרן דקל סויסה"
+          className="absolute inset-0 w-full h-full object-contain object-center scale-[1.4] translate-y-[0%] md:scale-[2.7] md:translate-y-[50%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-black/40" />
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="relative h-full flex flex-col items-center justify-end text-center text-white px-4 pb-28 md:pb-32"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg mb-4">
+            סרן דקל סויסה הי״ד
+          </h1>
+          <p className="text-xl md:text-3xl font-light italic drop-shadow-md max-w-2xl">
+            "אל תשכחו לחייך כשאתם מתעוררים"
+          </p>
+          <p className="mt-4 text-sm md:text-base text-white/90 drop-shadow leading-relaxed">
+             כ"א אדר א׳ תש"ס&nbsp;|&nbsp;27.2.2000&nbsp;&nbsp;·&nbsp;&nbsp; כ"ב תשרי תשפ"ד&nbsp;|&nbsp;7.10.2023
+          </p>
+        </motion.div>
+        <a
+          href="#story"
+          aria-label="גלילה לסיפור חייו"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/90 hover:text-white transition-colors animate-bounce"
+        >
+          <ChevronDown size={36} />
+        </a>
+      </section>
+
+      {/* Biography */}
+      <div id="story" className="scroll-mt-24 container mx-auto px-4 py-12 md:py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto"
         >
+          {/* Facts strip */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-16">
+            <span className="flex items-center gap-2 bg-primary-second/20 text-primary-fourth rounded-full px-4 py-2 text-sm md:text-base">
+              <Award size={18} className="text-primary-third" />
+              סרן
+            </span>
+            <span className="flex items-center gap-2 bg-primary-second/20 text-primary-fourth rounded-full px-4 py-2 text-sm md:text-base">
+              <Shield size={18} className="text-primary-third" />
+              גדוד 13, גולני
+            </span>
+            <span className="flex items-center gap-2 bg-primary-second/20 text-primary-fourth rounded-full px-4 py-2 text-sm md:text-base">
+              <Calendar size={18} className="text-primary-third" />
+              נולד כ"א אדר א׳ תש"ס · 27.2.2000
+            </span>
+            <span className="flex items-center gap-2 bg-primary-second/20 text-primary-fourth rounded-full px-4 py-2 text-sm md:text-base">
+              <Calendar size={18} className="text-primary-third" />
+              נפל כ"ב תשרי תשפ"ד · 7.10.2023
+            </span>
+            <span className="flex items-center gap-2 bg-primary-second/20 text-primary-fourth rounded-full px-4 py-2 text-sm md:text-base">
+              <MapPin size={18} className="text-primary-third" />
+              מוצב פגה (מגן בארי)
+            </span>
+          </div>
+
           {/* Content Layout */}
           <div className="flex flex-col lg:flex-row-reverse lg:gap-12">
             {/* Images Section */}
@@ -19,10 +88,10 @@ const Home: React.FC = () => {
               {/* Mobile: Newspaper layout */}
               <div className="lg:hidden">
                 <div className="flex gap-4 mb-6">
-                  <div className="w-48 h-48 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-                    <img 
-                      src="./images/dekel/main.JPG" 
-                      alt="דקל סויסה" 
+                  <div className="w-44 h-56 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+                    <img
+                      src="./images/dekel/main.JPG"
+                      alt="דקל סויסה"
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
@@ -36,62 +105,28 @@ const Home: React.FC = () => {
               </div>
               
               {/* Desktop: Multiple images */}
-              <div className="hidden lg:block space-y-12">
-                <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="./images/dekel/main.JPG" 
-                    alt="דקל סויסה במדים" 
-                    className="w-full h-full object-cover object-[50%_10%]"
-                  />
-                </div>
-                <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="./images/dekel/officer.jpg" 
-                    alt="דקל סויסה" 
+              <div className="hidden lg:block space-y-8">
+                <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src="./images/dekel/maglan.JPG"
+                    alt="דקל סויסה במדים"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="./images/dekel/whiteShirt.JPG" 
-                    alt="דקל סויסה" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                
-                {/* External Links - Desktop */}
-                <div className="bg-white border border-gray-200 rounded-2xl p-6">
-                  <h3 className="text-lg font-bold text-primary-fifth mb-4">
-                    קישורים נוספים
-                  </h3>
-                  <div className="space-y-3">
-                    <a 
-                      href="https://www.instagram.com/remember_dekel_swissa?igsh=MWdpdWoxcGFtMzFpbg==" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
-                    >
-                      <Instagram size={16} />
-                      <span className="text-sm">דף האינסטגרם לזכרו</span>
-                    </a>
-                    <a 
-                      href="https://morning-shops.com/LaShaker" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
-                    >
-                      <Coffee size={16} />
-                      <span className="text-sm">ליקר קפה לזכרו - La Shaker</span>
-                    </a>
-                    <a 
-                      href="https://www.matkonzikaron.co.il/kl-hmtkvnym/דקל-סויסה-ז%D7%B4ל" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
-                    >
-                      <BookOpen size={16} />
-                      <span className="text-sm">מתכון עם זיכרון - עוגיות שוקולד צ'יפס</span>
-                    </a>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="h-44 rounded-2xl overflow-hidden shadow-lg">
+                    <img
+                      src="./images/dekel/whiteShirt.JPG"
+                      alt="דקל סויסה"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="h-44 rounded-2xl overflow-hidden shadow-lg">
+                    <img
+                      src="./images/dekel/profile.JPG"
+                      alt="דקל סויסה"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                 </div>
               </div>
@@ -123,7 +158,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="w-48 h-48 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
                     <img 
-                      src="./images/dekel/officer.jpg" 
+                      src="./images/dekel/b9845ecf-e075-4faa-81b5-2e6d009d9cc6.JPG" 
                       alt="דקל סויסה במדים" 
                       className="w-full h-full object-cover object-top"
                     />
@@ -171,42 +206,6 @@ const Home: React.FC = () => {
                   <h3 className="text-2xl font-bold text-primary-fourth">
                     גיבור ישראל
                   </h3>
-                </div>
-
-                {/* External Links - Mobile */}
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 mt-8">
-                  <h3 className="text-lg font-bold text-primary-fifth mb-4">
-                    קישורים נוספים
-                  </h3>
-                  <div className="space-y-3">
-                    <a 
-                      href="https://www.instagram.com/remember_dekel_swissa?igsh=MWdpdWoxcGFtMzFpbg==" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
-                    >
-                      <Instagram size={16} />
-                      <span className="text-sm">דף האינסטגרם לזכרו</span>
-                    </a>
-                    <a 
-                      href="https://morning-shops.com/LaShaker" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
-                    >
-                      <Coffee size={16} />
-                      <span className="text-sm">ליקר קפה לזכרו - La Shaker</span>
-                    </a>
-                    <a 
-                      href="https://www.matkonzikaron.co.il/kl-hmtkvnym/דקל-סויסה-ז%D7%B4ל" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-reverse space-x-2 text-primary-fourth hover:text-primary-fifth transition-colors"
-                    >
-                      <BookOpen size={16} />
-                      <span className="text-sm">מתכון עם זיכרון - עוגיות שוקולד צ'יפס</span>
-                    </a>
-                  </div>
                 </div>
               </div>
 

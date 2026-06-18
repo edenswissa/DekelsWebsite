@@ -1,45 +1,72 @@
-/* Global Color Variables */
+/*
+ * Theme color tokens.
+ *
+ * The five `primary` tokens form a deliberate light -> dark scale and are used
+ * semantically across the app (main = lightest surface ... fifth = darkest /
+ * primary text). Because of that, dark mode is just a remap of the same scale:
+ * we flip the endpoints so surfaces go dark and text goes light, while the
+ * green accent (third) stays put. All values are space-separated RGB channels
+ * so Tailwind's opacity modifiers keep working (see tailwind.config.js).
+ */
 :root {
-  /* Primary Colors - New Palette */
-  --color-main: #E9E4DC;      /* Alabaster - cream/off-white */
-  --color-second: #BAC6B8;     /* Ash gray - light sage */
-  --color-third: #8BA794;      /* Cambridge blue - medium green */
-  --color-fourth: #5D6E75;     /* Payne's gray - dark blue-gray */
-  --color-fifth: #2F3456;      /* Space cadet - deep navy */
-  
-  /* Neutral Colors */
-  --color-white: #FFFFFF;
-  --color-black: #000000;
-  --color-gray: #6B7280;
-  
-  /* Opacity Variants */
-  --color-main-20: rgba(233, 228, 220, 0.2);
-  --color-second-20: rgba(186, 198, 184, 0.2);
-  --color-fourth-50: rgba(93, 110, 117, 0.5);
-  --color-white-95: rgba(255, 255, 255, 0.95);
+  /* Primary palette — light theme (unchanged from the original design) */
+  --color-main: 233 228 220;   /* #E9E4DC Alabaster - cream/off-white */
+  --color-second: 186 198 184; /* #BAC6B8 Ash gray - light sage */
+  --color-third: 139 167 148;  /* #8BA794 Cambridge blue - medium green */
+  --color-fourth: 93 110 117;  /* #5D6E75 Payne's gray - dark blue-gray */
+  --color-fifth: 47 52 86;     /* #2F3456 Space cadet - deep navy */
+
+  /* Semantic surface/text tokens for the non-palette utilities below */
+  --surface: #ffffff;          /* card background (light) */
+  --surface-muted: #f3f4f6;    /* subtle fills (gray-50/100) */
+  --surface-muted-strong: #e5e7eb;
+  --border-soft: #e5e7eb;      /* gray-200 borders */
+  --text-strong: #374151;      /* gray-700/800 body text */
+  --text-muted: #6b7280;       /* gray-500/600 secondary text */
+
+  /* Page chrome */
+  --page-bg: rgb(var(--color-main));
+  --page-fg: rgb(var(--color-fifth));
 }
 
-/* Utility Classes for Colors */
-.bg-primary-main { background-color: var(--color-main); }
-.bg-primary-second { background-color: var(--color-second); }
-.bg-primary-third { background-color: var(--color-third); }
-.bg-primary-fourth { background-color: var(--color-fourth); }
-.bg-primary-fifth { background-color: var(--color-fifth); }
+.dark {
+  /* Primary palette — dark theme (scale inverted, accent preserved) */
+  --color-main: 22 26 46;      /* deep navy-black — page & section surfaces */
+  --color-second: 42 48 80;    /* elevated surface / subtle borders */
+  --color-third: 148 179 158;  /* green accent, nudged brighter for contrast */
+  --color-fourth: 176 187 178; /* secondary text — light sage-gray */
+  --color-fifth: 233 228 220;  /* primary text — cream */
 
-.text-primary-main { color: var(--color-main); }
-.text-primary-second { color: var(--color-second); }
-.text-primary-third { color: var(--color-third); }
-.text-primary-fourth { color: var(--color-fourth); }
-.text-primary-fifth { color: var(--color-fifth); }
+  --surface: #1e2340;          /* card background (dark, lifted off page) */
+  --surface-muted: #252a48;
+  --surface-muted-strong: #2e3457;
+  --border-soft: #353c5e;
+  --text-strong: #dcdfe9;
+  --text-muted: #9aa0b8;
 
-.border-primary-main { border-color: var(--color-main); }
-.border-primary-second { border-color: var(--color-second); }
-.border-primary-third { border-color: var(--color-third); }
-.border-primary-fourth { border-color: var(--color-fourth); }
-.border-primary-fifth { border-color: var(--color-fifth); }
+  --page-bg: rgb(var(--color-main));
+  --page-fg: rgb(var(--color-fifth));
+}
 
-/* Opacity Variants */
-.bg-primary-main-20 { background-color: var(--color-main-20); }
-.bg-primary-second-20 { background-color: var(--color-second-20); }
-.bg-primary-fourth-50 { background-color: var(--color-fourth-50); }
-.bg-white-95 { background-color: var(--color-white-95); } 
+/*
+ * Dark-mode overrides for the fixed (non-palette) Tailwind utilities the pages
+ * use for cards, borders and gray body text. These selectors are intentionally
+ * `.dark .<utility>` so they outrank the single-class utility without
+ * !important. Opacity variants (bg-white/80 etc.) are translucent overlays and
+ * are left untouched on purpose.
+ */
+.dark .bg-white { background-color: var(--surface); }
+.dark .bg-gray-50,
+.dark .bg-gray-100 { background-color: var(--surface-muted); }
+.dark .bg-gray-200,
+.dark .bg-gray-300 { background-color: var(--surface-muted-strong); }
+
+.dark .text-black { color: var(--text-strong); }
+.dark .text-gray-700,
+.dark .text-gray-800 { color: var(--text-strong); }
+.dark .text-gray-500,
+.dark .text-gray-600 { color: var(--text-muted); }
+
+.dark .border-gray-100,
+.dark .border-gray-200,
+.dark .border-gray-300 { border-color: var(--border-soft); }

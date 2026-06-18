@@ -4,15 +4,23 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        /*
+         * The primary palette is driven by CSS custom properties (see
+         * src/styles/colors.css) so the whole scale can be remapped for dark
+         * mode in one place. Values are space-separated RGB channels, wrapped
+         * with <alpha-value> so Tailwind opacity modifiers (e.g.
+         * `bg-primary-fifth/5`) keep working.
+         */
         primary: {
-          main: '#E9E4DC',      /* Alabaster - cream/off-white */
-          second: '#BAC6B8',     /* Ash gray - light sage */
-          third: '#8BA794',      /* Cambridge blue - medium green */
-          fourth: '#5D6E75',     /* Payne's gray - dark blue-gray */
-          fifth: '#2F3456',      /* Space cadet - deep navy */
+          main: 'rgb(var(--color-main) / <alpha-value>)',    /* lightest surface (page/cards) */
+          second: 'rgb(var(--color-second) / <alpha-value>)', /* subtle surface / borders */
+          third: 'rgb(var(--color-third) / <alpha-value>)',   /* green accent */
+          fourth: 'rgb(var(--color-fourth) / <alpha-value>)', /* secondary text */
+          fifth: 'rgb(var(--color-fifth) / <alpha-value>)',   /* primary text (darkest) */
         },
         neutral: {
           white: '#FFFFFF',
